@@ -37,38 +37,69 @@ Comprehensive sales analysis for Bluemazon, an e-commerce company specializing i
 
 ## 🚀 Quick Start
 
-### Option 1: One-Click Launch (Easiest)
+### For Jupyter Analysis
+**Option 1: One-Click Launch (Easiest)**
 ```cmd
 # Double-click this file:
 run_project.bat
 ```
 
-### Option 2: Command Line
+**Option 2: Command Line**
 ```cmd
 pip install -r requirements.txt
 jupyter notebook ecommerce_sales.ipynb
 ```
 
-### Option 3: Manual Setup
+### For Power BI Analysis 📊
+**Prepare Data for Power BI:**
 ```cmd
-pip install pandas matplotlib seaborn jupyter
-jupyter notebook
-# Then click on ecommerce_sales.ipynb and run all cells
+# Double-click this file:
+prepare_for_powerbi.bat
+
+# Or run manually:
+python prepare_powerbi_data.py
 ```
+
+This creates 10 Power BI-ready CSV files with:
+- ✅ Star schema data model
+- ✅ Dimension tables (Date, Product, Geography, Time)
+- ✅ Fact table (185K+ transactions)
+- ✅ Pre-aggregated summary tables
+- ✅ Complete documentation
+
+**Then:** Import the CSV files from `powerbi_data` folder into Power BI Desktop
+
+📖 **See [POWERBI_QUICK_START.md](POWERBI_QUICK_START.md) for 5-minute setup guide**
 
 ## 📁 Project Structure
 ```
 sales_Analysis/
-├── 📓 ecommerce_sales.ipynb    # Main analysis notebook
-├── 📂 dataset/                  # 12 monthly CSV files
-├── 📂 images/                   # Generated visualizations
-├── 📄 README.md                 # This file
-├── 📄 HOW_TO_RUN.md            # Detailed instructions
-├── 📄 QUICK_START.md           # Quick reference
-├── 📄 PROJECT_SUMMARY.md       # Complete overview
-├── 📄 PRESENTATION_GUIDE.md    # Business presentation guide
-├── 📄 requirements.txt         # Dependencies
-└── 🚀 run_project.bat          # One-click launcher
+├── 📓 ecommerce_sales.ipynb        # Main Jupyter analysis
+├── 🐍 prepare_powerbi_data.py      # Power BI data preparation script
+├── 📂 dataset/                      # 12 monthly CSV files (raw data)
+├── 📂 powerbi_data/                 # Power BI-ready files (generated)
+│   ├── FactSales.csv               # Main transaction table
+│   ├── DimDate.csv                 # Date dimension
+│   ├── DimProduct.csv              # Product dimension
+│   ├── DimGeography.csv            # Geography dimension
+│   ├── DimTime.csv                 # Time dimension
+│   ├── MonthlySummary.csv          # Pre-aggregated monthly data
+│   ├── CitySummary.csv             # Pre-aggregated city data
+│   ├── ProductSummary.csv          # Pre-aggregated product data
+│   ├── HourlySummary.csv           # Pre-aggregated hourly data
+│   ├── SalesData_Complete.csv      # Complete cleaned dataset
+│   └── DATA_MODEL_README.md        # Data model documentation
+├── 📂 images/                       # Generated visualizations
+├── 📄 README.md                     # This file
+├── 📄 HOW_TO_RUN.md                # Jupyter setup guide
+├── 📄 POWERBI_GUIDE.md             # Complete Power BI guide
+├── 📄 POWERBI_QUICK_START.md       # 5-minute Power BI setup
+├── 📄 QUICK_START.md               # Quick reference
+├── 📄 PROJECT_SUMMARY.md           # Complete overview
+├── 📄 PRESENTATION_GUIDE.md        # Business presentation guide
+├── 📄 requirements.txt             # Python dependencies
+├── 🚀 run_project.bat              # One-click Jupyter launcher
+└── 🚀 prepare_for_powerbi.bat      # One-click Power BI prep
 ```
 
 # Getting Started

@@ -1,0 +1,25 @@
+Hour,TimePeriod,TimeKey
+0,Night (0-6),1
+1,Night (0-6),2
+2,Night (0-6),3
+3,Night (0-6),4
+4,Night (0-6),5
+5,Night (0-6),6
+6,Morning (6-12),7
+7,Morning (6-12),8
+8,Morning (6-12),9
+9,Morning (6-12),10
+10,Morning (6-12),11
+11,Morning (6-12),12
+12,Afternoon (12-18),13
+13,Afternoon (12-18),14
+14,Afternoon (12-18),15
+15,Afternoon (12-18),16
+16,Afternoon (12-18),17
+17,Afternoon (12-18),18
+18,Evening (18-24),19
+19,Evening (18-24),20
+20,Evening (18-24),21
+21,Evening (18-24),22
+22,Evening (18-24),23
+23,Evening (18-24),24
