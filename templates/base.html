@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}E-commerce Sales Dashboard{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>Sales Analytics</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="{% if request.endpoint == 'index' %}active{% endif %}">
+                    <i class="fas fa-home"></i> Dashboard
+                </a></li>
+                <li><a href="/geographic" class="{% if request.endpoint == 'geographic' %}active{% endif %}">
+                    <i class="fas fa-map-marked-alt"></i> Geographic
+                </a></li>
+                <li><a href="/products" class="{% if request.endpoint == 'products' %}active{% endif %}">
+                    <i class="fas fa-box"></i> Products
+                </a></li>
+                <li><a href="/time-analysis" class="{% if request.endpoint == 'time_analysis' %}active{% endif %}">
+                    <i class="fas fa-clock"></i> Time Analysis
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 E-commerce Sales Analysis | Built with Flask & Chart.js</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

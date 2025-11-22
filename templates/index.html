@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - E-commerce Sales Analytics{% endblock %}
+
+{% block content %}
+<div class="dashboard-header">
+    <h1><i class="fas fa-chart-bar"></i> Sales Dashboard</h1>
+    <p class="subtitle">2019 E-commerce Performance Overview</p>
+</div>
+
+<!-- KPI Cards -->
+<div class="kpi-container">
+    <div class="kpi-card">
+        <div class="kpi-icon revenue">
+            <i class="fas fa-dollar-sign"></i>
+        </div>
+        <div class="kpi-content">
+            <h3>Total Revenue</h3>
+            <p class="kpi-value" id="total-revenue">Loading...</p>
+            <span class="kpi-label">USD</span>
+        </div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-icon orders">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+        <div class="kpi-content">
+            <h3>Total Orders</h3>
+            <p class="kpi-value" id="total-orders">Loading...</p>
+            <span class="kpi-label">Orders</span>
+        </div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-icon avg-order">
+            <i class="fas fa-receipt"></i>
+        </div>
+        <div class="kpi-content">
+            <h3>Avg Order Value</h3>
+            <p class="kpi-value" id="avg-order">Loading...</p>
+            <span class="kpi-label">USD</span>
+        </div>
+    </div>
+
+    <div class="kpi-card">
+        <div class="kpi-icon items">
+            <i class="fas fa-box-open"></i>
+        </div>
+        <div class="kpi-content">
+            <h3>Items Sold</h3>
+            <p class="kpi-value" id="total-quantity">Loading...</p>
+            <span class="kpi-label">Units</span>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row 1 -->
+<div class="charts-row">
+    <div class="chart-container large">
+        <h2><i class="fas fa-calendar-alt"></i> Monthly Sales Trend</h2>
+        <canvas id="monthlySalesChart"></canvas>
+    </div>
+</div>
+
+<!-- Charts Row 2 -->
+<div class="charts-row">
+    <div class="chart-container">
+        <h2><i class="fas fa-map-marker-alt"></i> Top 10 Cities</h2>
+        <canvas id="topCitiesChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2><i class="fas fa-box"></i> Top 10 Products</h2>
+        <canvas id="topProductsChart"></canvas>
+    </div>
+</div>
+
+<!-- Charts Row 3 -->
+<div class="charts-row">
+    <div class="chart-container">
+        <h2><i class="fas fa-clock"></i> Sales by Hour</h2>
+        <canvas id="hourlySalesChart"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2><i class="fas fa-tags"></i> Sales by Category</h2>
+        <canvas id="categorySalesChart"></canvas>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

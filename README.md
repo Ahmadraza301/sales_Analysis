@@ -71,6 +71,28 @@ This creates 10 Power BI-ready CSV files with:
 
 📖 **See [POWERBI_QUICK_START.md](POWERBI_QUICK_START.md) for 5-minute setup guide**
 
+### For Web Dashboard 🌐
+**Launch Interactive Web Application:**
+```cmd
+# Double-click this file:
+run_webapp.bat
+
+# Or run manually:
+pip install -r requirements_web.txt
+python app.py
+```
+
+This starts a Flask web server with:
+- ✅ Interactive dashboard with Chart.js visualizations
+- ✅ Real-time KPI cards
+- ✅ Multiple analysis pages
+- ✅ Responsive design (works on mobile)
+- ✅ REST API endpoints
+
+**Then:** Open browser to http://localhost:5000
+
+📖 **See [WEBAPP_GUIDE.md](WEBAPP_GUIDE.md) for complete web app guide**
+
 ## 📁 Project Structure
 ```
 sales_Analysis/
